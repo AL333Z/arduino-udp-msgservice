@@ -2,18 +2,8 @@ package msglib;
 
 import gnu.io.CommPortIdentifier;
 
-import java.net.DatagramPacket;
-import java.net.InetAddress;
-import java.net.MulticastSocket;
 import java.util.Enumeration;
-import java.util.Random;
 
-/**
- * Message passing bridge for that supports multiple serial ports -> UDP
- * 
- * To be used with one or multiple Arduinos connected via Serial Port
- *
- */
 class MsgReceiver extends Thread {
 
 	private MsgServiceUDPMulticast multicast;
@@ -80,6 +70,12 @@ class MsgForwarder extends Thread {
 	}
 }
 
+/**
+ * Message passing bridge for that supports multiple serial ports -> UDP
+ * 
+ * To be used with one or multiple Arduinos connected via Serial Port
+ *
+ */
 public class ArduinoMsgBridgeService {
 
 	public static void main(String[] args) throws Exception {
@@ -95,7 +91,8 @@ public class ArduinoMsgBridgeService {
 				System.out.println(currPortId.getName());
 			}
 		} else {
-			BroadcastSerialCommChannel channel = new BroadcastSerialCommChannel(args, 9600);
+			BroadcastSerialCommChannel channel = new BroadcastSerialCommChannel(
+					args, 9600);
 			// SerialCommChannel channel = new SerialCommChannel(args[0], 9600);
 
 			System.out.println("[BRIDGE] Waiting for arduino... ");
