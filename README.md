@@ -3,7 +3,11 @@ A message-passing library, to bridge serial port data to UDP messages.
 
 > Most of this code is taken and adapted from the course `Embedded Systems Programming`, `Unibo 2014/2015`
 
-`ArduinoMsgBridgeService` is an example of a message passing bridge for that supports multiple serial ports -> Multicast UDP.
+##What is this
+
+`ArduinoMsgBridgeService` is an example of a message passing bridge that supports comunication from multiple serial ports to Multicast UDP.
+
+![](images/arch-bridge.png)
 
 ##Up and running
 Launch `ArduinoMsgBridgeService`, with a list of serial ports as arguments.
