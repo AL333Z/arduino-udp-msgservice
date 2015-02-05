@@ -9,3 +9,5 @@ A message-passing library, to bridge serial port data to UDP messages.
 Launch `ArduinoMsgBridgeService`, with a list of serial ports as arguments.
 
 `java -Djava.net.preferIPv4Stack=true -jar bridge.jar /dev/cu.usbmodem1421`
+
+For a concrete running example, see [play-parking-pi](https://github.com/AL333Z/play-parking-pi) and [arduino-parking](https://github.com/AL333Z/arduino-parking).
